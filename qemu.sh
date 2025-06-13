@@ -15,4 +15,5 @@ wget -O win.iso "https://software.download.prss.microsoft.com/dbazure/Win11_24H2
 # NodeOS
 # curl --location "http://k.copy.sh/nodeos-kernel.bin" --output /tmp/kernel
 qemu-img create win.img 128G /tmp/
+qemu-system-aarch64 -M virt -cpu host -accel kvm -m 4G -smp 4 -device ramfb -device virtio-gpu-pci -bios /usr/share/qemu/qemu-uefi-aarch64.bin -device qemu-xhci -device usb-kbd -device usb-tablet -drive file=Win11_24H2_EnglishInternational_Arm64.iso,media=cdrom,if=none,id=inst -device usb-storage,drive=inst -drive file=virtio-win.iso,media=cdrom,if=none,id=iso -device usb-storage,drive=iso -drive file=win11.qcow2,if=virtio -nic user,model=virtio-net-pci,mac=2A:50:A7:4E:D9:C4 -vnc  :0
 /tmp/vnc/utils/novnc_proxy
