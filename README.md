@@ -2,6 +2,9 @@ install GPU drive
 wget https://raw.githubusercontent.com/ibdrok/linux/refs/heads/main/.github/workflows/Rx580.install.sh
 chmod +x Rx580.install.sh
 ./Rx580.install.sh
+
+
+
 configurações adicionais
 Configure o driver AMD-PRO para uso
 Certifique-se de que a conta de usuário seja membro do grupo "vídeo" antes de usar o driver vulkan. Você pode encontrar em quais grupos você é membro com o seguinte comando:
@@ -14,6 +17,9 @@ Salve e feche o editor txt
 Execute o seguinte no terminal para atualizar o grub:
 # sudo update-grub
 Reiniciar
+
+
+
 verificação 
 Verificar Funcionalidade
 Execute o seguinte no terminal:
